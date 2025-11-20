@@ -1,7 +1,16 @@
-package PACKAGE_NAME;
+public class MojaIznimka extends Exception {
+    private String korisnika;
 
-public class MojaIznimka extends RuntimeException {
-  public MojaIznimka(String message) {
-    super(message);
-  }
+    public MojaIznimka(String message,  String korisnika) {
+        super(message);
+        setKorisnika(korisnika);
+    }
+
+    public String getKorisnika() {
+        return korisnika;
+    }
+
+    public void setKorisnika(String korisnika) {
+        this.korisnika = korisnika;
+    }
 }
